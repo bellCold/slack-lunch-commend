@@ -38,4 +38,4 @@ out/
 .vscode/
 
 ### Slack ###
-slack.properties
+applcation-slack.properties
