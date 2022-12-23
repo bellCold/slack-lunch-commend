@@ -4,8 +4,7 @@
 
 ```Spring Boot```
 를 이용해 제작한 Slack 점심 알리미 봇입니다.
-
-![점심](lunch.png){: width="300" height="300"}
+<img src="lunch.png" width="300" height="300">
 
 Gradle 설정 정보
 
