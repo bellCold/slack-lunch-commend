@@ -24,7 +24,7 @@ public class SlackService {
         messageBuilder.put("text", message);
         HttpEntity<Map<String, String>> request = new HttpEntity<>(messageBuilder, headers);
 
-        String url = "https://hooks.slack.com/services/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";
+        String url = "https://hooks.slack.com/services/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";
         restTemplate.postForEntity(url, request, String.class);
     }
 
