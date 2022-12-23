@@ -16,14 +16,16 @@ public class SlackService {
 
     private final RestTemplate restTemplate;
 
-    public void postSlackMessage(String message) {
-        String url = "https://hooks.slack.com/services/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";
+    public void sendSlackMessage(String message) {
         Map<String, String> messageBuilder = new HashMap<>();
         HttpHeaders headers = new HttpHeaders();
 
         headers.setContentType(MediaType.APPLICATION_JSON);
         messageBuilder.put("text", message);
         HttpEntity<Map<String, String>> request = new HttpEntity<>(messageBuilder, headers);
+
+        String url = "https://hooks.slack.com/services/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";
         restTemplate.postForEntity(url, request, String.class);
     }
+
 }
