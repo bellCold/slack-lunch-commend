@@ -10,9 +10,10 @@ import org.springframework.scheduling.annotation.Scheduled;
 @EnableScheduling
 @Configuration
 public class SlackLunchSchedule {
-
+    // 0 0/1 * * * * -> 1분마다
+    // 0 0 12 * * * -> 12시마
     private final SlackLunchService slackLunchService;
-    private static final String LUNCH_ALERT_TIMER = "0 * * * * *";
+    private static final String LUNCH_ALERT_TIMER = "0 0 12 * * *";
 
     @Scheduled(cron = LUNCH_ALERT_TIMER)
     public void todayLunchRecommendMenu() {
