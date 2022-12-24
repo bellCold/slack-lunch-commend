@@ -4,7 +4,9 @@
 
 ```Spring Boot```
 를 이용해 제작한 Slack 점심 알리미 봇입니다.
-<img src="lunch.png" width="300" height="300">
+<div>
+        <img src="lunch.png" width="300" height="300">
+</div>
 
 Gradle 설정 정보
 
@@ -25,7 +27,7 @@ dependencies{
 @Scheduled / cron을 이용하여 매일 정오에 알람이 발송 되도록 하였습니다.
 
 ```java
-private static final String LUNCH_ALERT_TIMER="0 * * * * *";
+private static final String LUNCH_ALERT_TIMER="0 0 12 * * *";
 
 @Scheduled(cron = LUNCH_ALERT_TIMER)
 public void todayLunchRecommendMenu() {
