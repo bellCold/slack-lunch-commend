@@ -17,7 +17,7 @@ public class SlackService {
 
     public void postSlackMessage(String message) {
         try {
-            MethodsClient methods = Slack.getInstance().methods("xoxb-4572177822961-4553022238470-wGK42cmntMM4ZfE2IsIs6GEw");
+            MethodsClient methods = Slack.getInstance().methods("xoxb-45721778222961-4553022238470-wGK42cmntMM4ZfE2IsIs6GEw");
             ChatPostMessageRequest request = ChatPostMessageRequest.builder()
                     .channel("#lunch")
                     .text(message)
