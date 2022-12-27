@@ -14,7 +14,7 @@ public class SlackLunchSchedule {
     // 0 0 12 * * * -> 12시마
     // 0/10 * * * * ? -> 10초마다
     private final SlackLunchService slackLunchService;
-    private static final String LUNCH_ALERT_TIMER = "0 0/1 * * * *";
+    private static final String LUNCH_ALERT_TIMER = "0/10 * * * * ? ";
 
     @Scheduled(cron = LUNCH_ALERT_TIMER)
     public void todayLunchRecommendMenu() {

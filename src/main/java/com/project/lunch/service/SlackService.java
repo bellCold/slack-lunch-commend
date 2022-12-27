@@ -22,20 +22,6 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class SlackService {
 
-    private final RestTemplate restTemplate;
-
-    public void sendSlackMessage(String message) {
-        Map<String, String> messageBuilder = new HashMap<>();
-        HttpHeaders headers = new HttpHeaders();
-
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        messageBuilder.put("text", message);
-        HttpEntity<Map<String, String>> request = new HttpEntity<>(messageBuilder, headers);
-
-        String url = "https://w1671775896-0o7589189.slack.com/archives/C04GD0BKGPP";
-        restTemplate.postForEntity(url, request, String.class);
-    }
-
     @Value(value = "${slack.token}")
     String token;
     @Value(value = "${slack.channel.monitor}")
