@@ -11,5 +11,6 @@ public class SlackMessage {
 
     private String message;
     private String emoji;
+    private String test;
 
 }
