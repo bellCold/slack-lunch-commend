@@ -1,8 +1,7 @@
-package com.project.lunch.service;
+package com.project.lunch.application;
 
 import com.project.lunch.domain.Menu;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 public class SlackLunchService extends SlackService {

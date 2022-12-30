@@ -1,4 +1,4 @@
-package com.project.lunch.service;
+package com.project.lunch.application;
 
 import com.slack.api.Slack;
 import com.slack.api.methods.MethodsClient;

@@ -1,14 +1,14 @@
-package com.project.lunch.config;
+package com.project.lunch.global.config;
 
-import com.project.lunch.service.SlackLunchService;
+import com.project.lunch.application.SlackLunchService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
+@Configuration
 @RequiredArgsConstructor
 @EnableScheduling
-@Configuration
 public class SlackLunchSchedule {
     // 0 0/1 * * * * -> 1분마다
     // 0 0 12 * * * -> 12시마
