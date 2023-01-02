@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 @Configuration
 @RequiredArgsConstructor
 @EnableScheduling
-public class SlackLunchSchedule {
+public class SlackLunchScheduleConfig {
     // 0 0/1 * * * * -> 1분마다
     // 0 0 12 * * * -> 12시마
     // 0/10 * * * * ? -> 10초마다
