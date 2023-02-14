@@ -60,18 +60,7 @@ public class WeatherService {
         br.close();
         conn.disconnect();
         String data = sb.toString();
-        System.out.println(data);
 
-        /**
-         * PTY: 0  -> 강수 코드
-         * REH : 58
-         * RN1 : 0
-         * T1H : -2.6
-         * UUU : 1.4
-         * VEC : 311
-         * VVV : -1.1
-         * WSD : 1.9
-         */
         Double currentTemp = null;
         Double currentRainFallStatus = null;
 

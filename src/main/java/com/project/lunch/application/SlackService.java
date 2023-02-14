@@ -10,14 +10,14 @@ import org.springframework.beans.factory.annotation.Value;
 import java.io.IOException;
 
 @Slf4j
-public abstract class SlackService {
+abstract class SlackService {
     @Value(value = "${slack.token}")
     String token;
 
     @Value(value = "${slack.channel.monitor}")
     String channel;
 
-    public void postSlackMessage(String message) {
+    protected void postSlackMessage(String message) {
         try {
             MethodsClient methods = Slack.getInstance().methods(token);
             ChatPostMessageRequest request = ChatPostMessageRequest.builder()
