@@ -36,10 +36,10 @@ public class WeatherService {
         StringBuilder urlBuilder = new StringBuilder(URL);
         urlBuilder.append("?" + URLEncoder.encode("serviceKey", UTF_8) + "=" + serviceKey);
         urlBuilder.append("&" + URLEncoder.encode("dataType", UTF_8) + "=" + URLEncoder.encode("JSON", UTF_8));
-        urlBuilder.append("&" + URLEncoder.encode("base_date", UTF_8) + "=" + URLEncoder.encode(CURRENT_DATE, UTF_8)); /* 조회하고싶은 날짜*/
-        urlBuilder.append("&" + URLEncoder.encode("base_time", UTF_8) + "=" + URLEncoder.encode(BASE_TIME, UTF_8)); /* 조회하고싶은 시간 AM 02시부터 3시간 단위 */
-        urlBuilder.append("&" + URLEncoder.encode("nx", UTF_8) + "=" + URLEncoder.encode(NX, UTF_8)); //경도
-        urlBuilder.append("&" + URLEncoder.encode("ny", UTF_8) + "=" + URLEncoder.encode(NY, UTF_8)); //위도
+        urlBuilder.append("&" + URLEncoder.encode("base_date", UTF_8) + "=" + URLEncoder.encode(CURRENT_DATE, UTF_8));
+        urlBuilder.append("&" + URLEncoder.encode("base_time", UTF_8) + "=" + URLEncoder.encode(BASE_TIME, UTF_8));
+        urlBuilder.append("&" + URLEncoder.encode("nx", UTF_8) + "=" + URLEncoder.encode(NX, UTF_8));
+        urlBuilder.append("&" + URLEncoder.encode("ny", UTF_8) + "=" + URLEncoder.encode(NY, UTF_8));
 
         URL url = new URL(urlBuilder.toString());
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();

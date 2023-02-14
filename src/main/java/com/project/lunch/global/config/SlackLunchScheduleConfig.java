@@ -17,7 +17,6 @@ public class SlackLunchScheduleConfig {
 
     private final SlackLunchService slackLunchService;
 
-
     @Scheduled(cron = LUNCH_ALERT_TIMER)
     public void todayLunchRecommendMenu() throws IOException {
         slackLunchService.sendLunchMessage();
