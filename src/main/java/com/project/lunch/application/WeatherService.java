@@ -63,7 +63,6 @@ public class WeatherService {
 
         Double currentTemp = null;
         Double currentRainFallStatus = null;
-
         JSONObject jObject = new JSONObject(data);
         JSONObject response = jObject.getJSONObject("response");
         JSONObject body = response.getJSONObject("body");
@@ -83,6 +82,7 @@ public class WeatherService {
                     currentRainFallStatus = obsrValue;
             }
         }
+
         return new Weather(currentTemp, currentRainFallStatus);
     }
 
