@@ -23,11 +23,13 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
     // Slack
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.squareup.okhttp3:okhttp:4.10.0'
     implementation 'com.slack.api:bolt-servlet:1.27.2'
+
+    // Json parsing
+    implementation 'org.json:json:20220320'
 }
 
 tasks.named('test') {

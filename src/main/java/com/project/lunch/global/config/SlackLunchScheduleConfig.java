@@ -1,23 +1,26 @@
 package com.project.lunch.global.config;
 
 import com.project.lunch.application.SlackLunchService;
+import com.project.lunch.global.annotaion.LunchScheduleConfig;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
-@Configuration
+import java.io.IOException;
+
+@LunchScheduleConfig
 @RequiredArgsConstructor
-@EnableScheduling
 public class SlackLunchScheduleConfig {
     // 0 0/1 * * * * -> 1분마다
     // 0 0 12 * * * -> 12시마
     // 0/10 * * * * ? -> 10초마다
+    private static final String LUNCH_ALERT_TIMER = "0/10 * * * * ?";
+
     private final SlackLunchService slackLunchService;
-    private static final String LUNCH_ALERT_TIMER = "0 0 12 * * *? ";
+
 
     @Scheduled(cron = LUNCH_ALERT_TIMER)
-    public void todayLunchRecommendMenu() {
+    public void todayLunchRecommendMenu() throws IOException {
         slackLunchService.sendLunchMessage();
     }
+
 }
