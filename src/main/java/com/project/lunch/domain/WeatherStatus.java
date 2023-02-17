@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.Locale;
 
 public enum WeatherStatus {
+    CLEAR(0),
     RAIN(1),
-    SNOW(2),
-    CLEAR(0);
+    SNOW(2);
 
     private final int weatherCode;
 

@@ -6,9 +6,11 @@ import com.slack.api.methods.SlackApiException;
 import com.slack.api.methods.request.chat.ChatPostMessageRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
+@Service
 @Slf4j
 abstract class SlackService {
     @Value(value = "${slack.token}")
@@ -27,10 +29,9 @@ abstract class SlackService {
 
             methods.chatPostMessage(request);
 
-            log.info("보냄");
+            log.info("발송 완료");
         } catch (SlackApiException | IOException e) {
-            log.error(e.getMessage());
+            log.error("발송 실패" + e.getMessage());
         }
     }
-
 }

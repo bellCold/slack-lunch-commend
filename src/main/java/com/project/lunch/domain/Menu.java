@@ -6,6 +6,7 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 public enum Menu {
+    // todo 지저분하고 이상함 정리하기
     KOREAN(List.of("라면", "부대찌개", "비빔밥", "김밥"), "clear"),
     JAPANESE(List.of("초밥", "우동", "돈까스"), "clear"),
     WESTERN(List.of("햄버거", "샌드위치", "스파게티"), "clear"),

@@ -1,7 +1,7 @@
 package com.project.lunch.api;
 
+import com.project.lunch.api.request.SlackMessageDto;
 import com.project.lunch.application.SlackMessageService;
-import com.project.lunch.domain.SlackMessage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,9 +15,7 @@ public class SlackMessageController {
     private final SlackMessageService slackMessageService;
 
     @PostMapping("/slack")
-    public void sendMessage(@RequestBody SlackMessage slackMessage) {
-        String message = slackMessage.getMessage() + " " + slackMessage.getEmoji();
-        slackMessageService.postSlackMessage(message);
+    public void sendMessage(@RequestBody SlackMessageDto slackMessage) {
+        slackMessageService.postSlackMessage(slackMessage.toString());
     }
-
 }
