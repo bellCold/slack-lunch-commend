@@ -32,6 +32,8 @@ dependencies {
     // Json parsing
     implementation 'org.json:json:20220320'
 
+    //vault
+    implementation 'org.springframework.cloud:spring-cloud-starter-vault-config:3.1.1'
 }
 
 tasks.named('test') {
